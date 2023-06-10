@@ -29,7 +29,8 @@ const list = [
   },
 ];
 
-function App() {
+// defining App
+const App = () => {
   
   return (
     <div>
@@ -41,17 +42,22 @@ function App() {
 
       <h1>My Hacker Stories</h1>
 
+      {/* creating an instance of Search component */}
       <Search />
 
       <hr />
 
+      {/* creating an instance of List component */}
+      <List />
+
+      {/* creating another instance of List component */}
       <List />
       
     </div>
   );
 }
 
-function Search() {
+const Search = () => {
   return (
     <div>
       <label htmlFor="search">Search: </label>
@@ -60,10 +66,11 @@ function Search() {
   );
 }
 
-function List() {
+//definition of List component
+const List = () => {
   return (
     <ul>
-      {list.map(function (item) {
+      {list.map((item) => {
         return (
           <li key={item.objectID}>
           <span>
